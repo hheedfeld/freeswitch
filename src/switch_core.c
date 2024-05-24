@@ -2418,8 +2418,8 @@ SWITCH_DECLARE(const char *) switch_core_banner(void)
 
 			"|   Anthony Minessale II, Michael Jerris, Brian West, Others  |\n"
 			"|   FreeSWITCH (http://www.freeswitch.org)                    |\n"
-			"|   Paypal Donations Appreciated: paypal@freeswitch.org       |\n"
-			"|   Brought to you by ClueCon http://www.cluecon.com/         |\n"
+			"|                                                             |\n"
+			"|   callio.net Fernsprechdienst                               |\n"
 			".=============================================================.\n"
 			"\n");
 }
