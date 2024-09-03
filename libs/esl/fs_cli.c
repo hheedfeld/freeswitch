@@ -1054,8 +1054,8 @@ static const char *banner =
     "| Anthony Minessale II, Ken Rice,                       |\n"
     "| Michael Jerris, Travis Cross                          |\n"
     "| FreeSWITCH (http://www.freeswitch.org)                |\n"
-    "| Paypal Donations Appreciated: paypal@freeswitch.org   |\n"
-    "| Brought to you by ClueCon http://www.cluecon.com/     |\n"
+    "|                                                       |\n"
+    "| callio.net Fernsprechdienst                           |\n"
     ".=======================================================.\n"
     "\n";
 
