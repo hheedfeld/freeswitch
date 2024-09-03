@@ -430,7 +430,7 @@ static switch_status_t http_put(url_cache_t *cache, http_profile_t *profile, swi
 		if (*httpRes == 200 || *httpRes == 201 || *httpRes == 202 || *httpRes == 204) {
 			switch_log_printf(SWITCH_CHANNEL_SESSION_LOG(session), SWITCH_LOG_DEBUG, "%s saved to %s\n", filename, full_url);
 		} else {
-			switch_log_printf(SWITCH_CHANNEL_SESSION_LOG(session), SWITCH_LOG_ERROR, "Received HTTP error %ld trying to save %s to %s\n", *httpRes, filename, url);
+			switch_log_printf(SWITCH_CHANNEL_SESSION_LOG(session), SWITCH_LOG_WARNING, "Received HTTP error %ld trying to save %s to %s\n", *httpRes, filename, url);
 			status = SWITCH_STATUS_GENERR;
 		}
 
@@ -1177,7 +1177,7 @@ static switch_status_t http_get(url_cache_t *cache, http_profile_t *profile, cac
 
 	if (curl_status == CURLE_OK) {
 		int duration_ms = (switch_time_now() / 1000) - start_time_ms;
-		if (duration_ms > 500) {
+		if (duration_ms > 1500) {
 			switch_log_printf(SWITCH_CHANNEL_SESSION_LOG(session), SWITCH_LOG_WARNING, "URL %s downloaded in %d ms\n", url->url, duration_ms);
 		} else {
 			switch_log_printf(SWITCH_CHANNEL_SESSION_LOG(session), SWITCH_LOG_INFO, "URL %s downloaded in %d ms\n", url->url, duration_ms);
